@@ -37,7 +37,7 @@ function clearGrid() {
 const gridBtn = document.querySelector('.gridBtn');
 
 gridBtn.addEventListener("click", function () {
-    let userInput = prompt("How many squares per side do you want for the new grid? Please input a number (Max 100).");
+    let userInput = prompt("How many squares per side do you want for the new grid? Enter a number (Max 100).");
 
     // Check if the user clicked "Cancel"
     if (userInput === null) return;  // Exit the function if the user cancels
@@ -45,7 +45,7 @@ gridBtn.addEventListener("click", function () {
 
     // Loop continues until a valid input is provided
     while (isNaN(userInput) || userInput < 1 || userInput > 100) {
-        userInput = prompt("Invalid input. Please enter a number between 1 and 100.");
+        userInput = prompt("Invalid input. Enter a number between 1 and 100.");
         if (userInput === null) return; // Exit if the user clicked "Cancel"
         userInput = Number(userInput);
     }
